@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://rhmap25t06f1"]
+
+[ext_resource type="Script" path="res://addons/resizable_box_container/resizable_box_container.gd" id="1_hmlgy"]
+[ext_resource type="Script" path="res://test.gd" id="1_mhuue"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhuue")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResizableBoxContainer" type="BoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hmlgy")
+separation = 10
+minimum_child_size = Vector2(100, 50)
+
+[node name="PanelContainer" type="VBoxContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ResizableBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "adsfhakdjsfaksdjfalsdjflkasdjf"
+
+[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer3" type="PanelContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer5" type="VBoxContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ResizableBoxContainer/PanelContainer5"]
+layout_mode = 2
+text = "adsfhakdjsfaksdjfalsdjflkasdjf"
+
+[node name="PanelContainer4" type="PanelContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer6" type="VBoxContainer" parent="ScrollContainer/ResizableBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ResizableBoxContainer/PanelContainer6"]
+layout_mode = 2
+text = "adsfhakdjsfaksdjfalsdjflkasdjf"
